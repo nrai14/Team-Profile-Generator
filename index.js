@@ -13,3 +13,27 @@ const render = require("./src/page-template.js");
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 
+const questions = [
+];
+
+inquirer
+  .prompt([
+    /* Pass your questions in here */
+    {
+        type: "input",
+        name: "name",
+        message: "What is the name of the team member?"
+    },
+    {
+      type: "list",
+      name: "role",
+      message: "What is the team member's role?",
+      choices: ["Engineer", "Intern", "Manager"]
+  },{
+    type: "input",
+    name: "email",
+    message: "What is the team member's email?"
+},
+  ])
+
+  console.log()
